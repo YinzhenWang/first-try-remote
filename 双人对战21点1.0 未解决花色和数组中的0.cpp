@@ -23,7 +23,7 @@ void random(int a[], int n)
 
 int main()  
 {  
-   int a[52] = {1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,11,11,11,11,12,12,12,12,13,13,13,13};  
+   int a[52] = {1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,11,11,11,11,12,12,12,12,0,0,0,0};  
    char ch1,ch2;
    int n,x,e,sum1,sum2;
    sum1=sum2=0;
@@ -36,8 +36,8 @@ int main()
         {
    	        scanf("%c",&ch1);
    	        if (ch1=='y')
-   	        {sum1+=a[n];
-   	        printf("玩家一抽到的点数为%d,目前的点数为%d。\n",a[n],sum1);
+   	        {sum1+=(1+a[n]);
+   	        printf("玩家一抽到的点数为%d,目前的点数为%d。\n",a[n]+1,sum1);
    	        break;
 		    }
 		     else if (ch1=='n')
@@ -47,15 +47,9 @@ int main()
 		    }
 		    else
 		    continue;
-		     if(a[n]=0)
-            {printf("抱歉程序错误，再抽一张吧，谢谢。");
-		     continue; 
-		    }
+		     
         }
-        if(a[n]=0)
-        {printf("抱歉程序错误，重来吧谢谢。");
-		continue; 
-		}
+        
         if(sum1>21)
         break;
 		else
@@ -63,8 +57,8 @@ int main()
         {
    	        scanf("%c",&ch2);
    	        if (ch2=='y')
-   	        {sum2+=a[n+1];
-   	        printf("玩家二抽到的点数为%d，目前的点数为%d\n",a[n+1],sum2);
+   	        {sum2+=(1+a[n+1]);
+   	        printf("玩家二抽到的点数为%d，目前的点数为%d\n",a[n+1]+1,sum2);
    	        break;
 		    }
 		     else if (ch2=='n')
@@ -74,19 +68,18 @@ int main()
 		    }
 		    else
 		    continue;
-		    if(a[n+1]=0)
-            {printf("抱歉程序错误，再抽一张吧，谢谢。");
-		     continue; 
-		    }
+		  
         }
         if(sum2>21 or ch1=='n'and ch1=='n')
         break;
     }
     
-    if(sum1>21 or sum2>sum1)
+    if(sum1>21)
     printf("\n玩家二胜！");
     else if(sum2>21 or sum1>sum2)
     printf("\n玩家一胜！");
+    else if(sum1<sum2)
+    printf("\n玩家二胜！");
     else if(sum1=sum2)
     printf("\n战平！"); 
 	 
