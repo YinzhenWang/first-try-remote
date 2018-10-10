@@ -30,7 +30,28 @@ int main()
    e=1;
    x=1;
    random(a, 52);  
-   for(n=1;x==1,n<51;n=n+2)    
+   sum1=1+a[0]; 
+   sum2=1+a[1];
+   
+   if (a[0]=0)
+   printf("玩家一抽到的是A，目前点数为%d。\n",sum1);
+   else if(a[0]=10)
+   printf("玩家一抽到的是J，目前点数为%d。\n",sum1);
+   else if(a[0]=11)
+   printf("玩家一抽到的是Q，目前点数为%d。\n",sum1);
+   else if(a[0]=12)
+   printf("玩家一抽到的是K，目前点数为%d。\n",sum1);
+   
+   if (a[1]=0)
+   printf("玩家一抽到的是A，目前点数为%d。\n",sum2);
+   else if(a[1]=10)
+   printf("玩家一抽到的是J，目前点数为%d。\n",sum2);
+   else if(a[1]=11)
+   printf("玩家一抽到的是Q，目前点数为%d。\n",sum2);
+   else if(a[1]=12)
+   printf("玩家一抽到的是K，目前点数为%d。\n",sum2);
+   
+   for(n=2;x==1,n<51;n=n+2)    
 	{
 			while (e==1)
         {
@@ -84,12 +105,7 @@ int main()
     printf("\n战平！"); 
 	 
    
-   
-   
-   
-   
-   
-   
+
    
    
    
