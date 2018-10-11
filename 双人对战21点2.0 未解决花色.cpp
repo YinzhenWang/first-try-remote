@@ -22,7 +22,7 @@ void random(int a[], int n)
 
 
 int main()  
-{  
+{  printf("*******21点双人对战*******\n"); 
    int a[52] = {1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,11,11,11,11,12,12,12,12,0,0,0,0};  
    char ch1,ch2;
    int n,x,e,b,sum1,sum2,y1,y2;
@@ -130,7 +130,10 @@ int main()
         }
         
         if(sum1>21)
-        break;
+        {
+		printf("爆牌了。\n");
+		break;
+	    }
 		else
 		while (e==1)
         {
@@ -172,7 +175,10 @@ int main()
 		  
         }
         if(sum2>21)
-        break;
+        {
+		printf("爆牌了。\n");
+		break;
+	    }
         else if(ch1=='n'and ch2=='n')
         break;
     }
