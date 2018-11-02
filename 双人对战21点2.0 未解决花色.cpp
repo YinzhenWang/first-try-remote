@@ -2,7 +2,7 @@
 #include <stdlib.h>  
 #include <time.h>  
   
-void random(int a[], int n)  
+void random(int a[], int n) 
 {  
    int index, tmp, i;  
    srand(time(NULL));  
@@ -13,7 +13,7 @@ void random(int a[], int n)
          {  
             tmp = a[i];  
             a[i] = a[index];  
-            a[index] = tmp;  
+          
          }  
     }  
  }  
